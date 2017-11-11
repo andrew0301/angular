@@ -1,13 +1,26 @@
-import {Flight} from 'flight';
+import {Flight, ScheduledFlight, CharterFlight} from 'flight';
+import {FlightManager} from 'flight-manager';
+import {Person, Passenger, Pilot} from 'person';
+let person1: Person = new Passenger();
+person1.firstName = "Max";
+person1.lastName = "Muster";
+let person1AsPassenger = person1 as Passenger;
+let status = person1AsPassenger.passengerStatus;
 
-let f: Flight{
-    id: 1,
-    from: 'Stuttgart',
-    to: 'Berlin Tegel',
-    date: '2017-11-16T17:00:00.00+01:00'
-}
-f.from = 'STR';
-f.to = 'TGX';
-console.debug('from',f.from);
-console.debug('flight',f);
+let person2: Person = new Pilot();
+person2.firstName = "Jens";
+person2.lastName = "Wolkenmeyer";
+
+let isPerson = person1 instanceof Person;
+let isPessenger = person1 instanceof Passenger;
+let isPilot = person1 instanceof Pilot;
+
+console.debug('isPerson', isPerson);
+console.debug('isPilot', isPilot);
+console.debug('isPessenger', isPessenger);
+
+
+
+
+
 
