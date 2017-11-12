@@ -22,6 +22,7 @@ export class CharterFlight{
     id: number;
     from: string;
     to: string;
+    date: string;
     distance: number;
     calcPrice(){
         return this.distance/2;

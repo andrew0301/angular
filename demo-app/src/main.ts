@@ -1,5 +1,6 @@
 import 'demo';
 import 'flights-demo';
+import 'adressen';
 import 'style-loader!bootstrap/dist/css/bootstrap.css';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
