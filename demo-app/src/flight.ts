@@ -7,7 +7,7 @@ export interface Flight{
     calcPrice?(): number;
 }
 
-export class ScheduledFlight{
+export class ScheduledFlight implements Flight{
     id: number;
     from: string;
     to: string;
@@ -15,6 +15,13 @@ export class ScheduledFlight{
     distance: number;
     calcPrice(){
         return this.distance/3;
+    }
+    get unixDate(){
+        return new Date(this.date).getTime();
+    }
+    set unixDate(time:number){
+        let date = new Date(time);
+        this.date = date.toISOString();
     }
 }
 

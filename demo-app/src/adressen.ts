@@ -19,3 +19,4 @@ export class CompanyAddress extends AbstractAddress{
         return `${this.id};${this.companyName};${this.street};${this.zipCode};${this.city}`;
     }
 }
+
